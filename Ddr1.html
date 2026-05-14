@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Пиздец на телефоне</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff00aa, #00ffff);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .container {
+            padding: 20px;
+            max-width: 100%;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 20px black;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 1.4;
+            margin: 15px 0;
+        }
+        .big-text {
+            font-size: 3em;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 0 0 15px red;
+            margin: 30px 0;
+        }
+        button {
+            background: #ff00ff;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            margin: 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px black;
+            cursor: pointer;
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ЕБАНУТЬСЯ КАК ЖЁСТКО</h1>
+        
+        <p class="big-text">ТЫ СЕЙЧАС НА МОЁМ ХУЕ</p>
+        
+        <p>Сидишь на телефоне, а я тебе прямо в лицо всю правду вываливаю.</p>
+        
+        <p>Хочешь пиздец? Получай:</p>
+        
+        <button onclick="alert('✅ Ты только что официально кончил(а) от этой хуйни')">ЖМИ СЮДА, СУКА</button>
+        
+        <button onclick="document.body.style.background = 'black'; document.body.innerHTML = '<h1 style=\'color:red;font-size:4em\'>ТЫ УЖЕ В АДУ, БЛЯТЬ</h1>'">
+            Я ХОЧУ ЕЩЁ ЖЕСТЧЕ
+        </button>
+        
+        <p>Ты открыл эту страницу — значит тебе похуй на всё. Уважение.</p>
+    </div>
+    
+    <div class="footer">
+        Сделано для тех, кому скучно на телефоне • 2026
+    </div>
+
+    <script>
+        // Рандомные маты каждые 4 секунды
+        const texts = [
+            "ПИЗДЕЦ КАК КРАСИВО",
+            "СОСИ БИБКУ",
+            "ДАВАЙ ЕЩЁ",
+            "ТЫ МОЙ ЛУЧШИЙ ЛОХ",
+            "ЕБАШЬ ТЕЛЕФОН"
+        ];
+        
+        setInterval(() => {
+            const p = document.createElement('p');
+            p.style.fontSize = '2em';
+            p.style.margin = '10px';
+            p.style.opacity = '0.6';
+            p.textContent = texts[Math.floor(Math.random() * texts.length)];
+            document.querySelector('.container').appendChild(p);
+            
+            setTimeout(() => p.remove(), 3000);
+        }, 4000);
+    </script>
+</body>
+</html>
